@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<sys/wait.h>
+
+int main(){
+  pid_tpid,child_pid;
+  pid=foek();
+
+if(pid<0){
+peror("fork failed");
+return 1;
+}else if(pid==0){
+child_pid=getpid();
+pid_tperents_pid=getooid();
+printf("child is having ID%d\n",child_pid);
+printf("My parent ID is %d\n",parents_pid);
+_exit(0);
+}else{
+child_pid=pid;
+printf("parent(P)is having ID%d\n",getpid());
+wait(null);
+printf("ID of P's Child is%d\n",child_pid);
+}
+return 0;
+}
